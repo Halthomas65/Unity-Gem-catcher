@@ -12,6 +12,11 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
+        if (ScoreManager.isGameOver) // nếu trò chơi kết thúc
+        {
+            return; // thoát khỏi hàm Update
+        }
+        
         float moveHorizontal = Input.GetAxis("Horizontal");
         bool isMoving = moveHorizontal != 0; // khai báo biến isMoving
         animator.SetBool("isMoving", isMoving);

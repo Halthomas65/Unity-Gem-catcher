@@ -8,8 +8,14 @@ public class GemMover : MonoBehaviour
   */
   public float speed = 5f;
 
+  public GameObject gem;
+
   void Update()
   {
+    if (ScoreManager.isGameOver)
+    {
+      Destroy(gameObject);
+    }
     transform.Translate(Vector3.down * speed * Time.deltaTime); //tạo chuyển động theo phương thẳng đứng hướng xuống với tốc độ trên theo thời gian
   }
 

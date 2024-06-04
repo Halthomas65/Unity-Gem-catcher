@@ -15,6 +15,8 @@ public class ScoreManager : MonoBehaviour
     public GameObject character;
     public GameObject gemSpawner;
 
+    public static bool isGameOver = false;
+
 
     void Start() // đếm giờ khi trò chơi bắt đầu
     {
@@ -28,6 +30,7 @@ public class ScoreManager : MonoBehaviour
     {
         if (remainingTime <= 0)
         {
+            isGameOver = true;
             GameOver();
         }
         scoreText.text = "Score: " + score + " | Time: " + Mathf.CeilToInt(remainingTime); //Mathf.CeilToInt(remainingTime) làm tròn số nguyên dương
@@ -51,7 +54,7 @@ public class ScoreManager : MonoBehaviour
     {
         gameOverText.text = "Game Over!\nScore: " + score;
         gameOverPanel.SetActive(true);
-        character.SetActive(false);
+        // character.SetActive(false);
         gemSpawner.SetActive(false);
     }
 }
