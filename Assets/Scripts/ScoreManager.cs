@@ -6,7 +6,7 @@ using TMPro;
 public class ScoreManager : MonoBehaviour
 {
     public static int score = 0;
-    private float remainingTime;
+    public float remainingTime = 30f;
 
     public TextMeshProUGUI scoreText;
 
@@ -20,7 +20,7 @@ public class ScoreManager : MonoBehaviour
 
     void Start() // đếm giờ khi trò chơi bắt đầu
     {
-        remainingTime = 30f; //thời gian còn lại tại thời điểm bắt đầu bằng 30s (thời lượng của trò chơi)
+        // remainingTime = 30f; //thời gian còn lại tại thời điểm bắt đầu bằng 30s (thời lượng của trò chơi)
         StartCoroutine(CountdownTimer());
         // là một phương thức nâng cao để gọi hàm CountdownTimer
         // nhằm cho phép đồng hồ chạy song song, tiếp tục đếm khi chuyển qua frame mới và kết thúc ở frame mới khi đạt đúng thời gian
