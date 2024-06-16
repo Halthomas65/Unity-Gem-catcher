@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public static float startSpeed = 5.0f;
-    public static float speed = startSpeed;
+    public float startSpeed = 5.0f;
+    public static float speed;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
@@ -14,6 +14,7 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
+        speed = startSpeed;
         animator = GetComponent<Animator>(); //bắt đầu animation khép mở chân
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +25,11 @@ public class CharacterMovement : MonoBehaviour
         if (ScoreManager.isGameOver) // nếu trò chơi kết thúc
         {
             return; // thoát khỏi hàm Update
+        }
+        else if (ScoreManager.resetValue) // nếu resetValue = true
+        {
+            speed = startSpeed; // reset lại tốc độ của nhân vật
+            ScoreManager.resetValue = false; // reset lại giá trị của resetValue
         }
 
         float moveHorizontal = Input.GetAxis("Horizontal");
