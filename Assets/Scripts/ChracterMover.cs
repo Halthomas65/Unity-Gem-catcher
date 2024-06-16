@@ -2,21 +2,21 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public static float startSpeed = 5.0f;
+    public static float speed = startSpeed;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
     // For jumping
-    bool jump = false;
-    // private bool stopJump;
-    public JumpState jumpState = JumpState.Grounded;
-    public float jumpForce = 6.0f;
+    private Rigidbody2D rb;
+    public float jump;
     // For jumping
 
     void Start()
     {
         animator = GetComponent<Animator>(); //bắt đầu animation khép mở chân
         spriteRenderer = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     void Update()
@@ -43,39 +43,12 @@ public class CharacterMovement : MonoBehaviour
         if (isMoving) // nếu nhân vật đang di chuyển ngang
         {
             transform.position += new Vector3(moveHorizontal * speed * Time.deltaTime, 0f, 0f);
+            // transform.position += new Vector2(moveHorizontal * speed * Time.deltaTime, 0f);
         }
 
-        if (Input.GetAxis("Vertical") > 0) // nếu nhân vật nhảy (nhấn phím lên)
+        if (Input.GetKeyDown(KeyCode.Space)) // nếu nhân vật nhảy (nhấn phím space)
         {
-            if (jumpState == JumpState.Grounded)    // nếu nhân vật đang ở trạng thái đứng trên mặt đất
-            {
-                jump = true;
-                jumpState = JumpState.Jumping;
-            }
+            rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
         }
-        UpdateJumpState();
-    }
-
-    // To be fixed
-    void UpdateJumpState()
-    {
-        jump = false;
-        switch (jumpState)
-        {
-            case JumpState.Grounded:
-                break;
-            case JumpState.Jumping:
-                jump = true;
-                break;
-            case JumpState.InFlight:
-                break;
-        }
-    }
-
-    public enum JumpState
-    {
-        Grounded,
-        Jumping,
-        InFlight
     }
 }
