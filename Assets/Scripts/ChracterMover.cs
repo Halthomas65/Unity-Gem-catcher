@@ -3,11 +3,7 @@ using UnityEngine;
 public class CharacterMovement : MonoBehaviour
 {
     public float startSpeed = 5.0f;
-    public float speedLimit = 20;
     public static float speed;
-    public static float minSpeed; // Cần đưa giá trị sang các file khác
-    public static float maxSpeed; // Cần đưa giá trị sang các file khác
-
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
@@ -19,8 +15,6 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         speed = startSpeed;
-        maxSpeed = speedLimit;
-        minSpeed = startSpeed;
         animator = GetComponent<Animator>(); //bắt đầu animation khép mở chân
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();

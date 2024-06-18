@@ -12,6 +12,7 @@ public class ScoreManager : MonoBehaviour
 
     public GameObject gameOverPanel;
     public TextMeshProUGUI gameOverText;
+    public GameObject character;
     public GameObject gemSpawner;
 
     public static bool isGameOver = false;
@@ -53,6 +54,7 @@ public class ScoreManager : MonoBehaviour
     {
         gameOverText.text = "Game Over!\nScore: " + score;
         gameOverPanel.SetActive(true);
-        gemSpawner.SetActive(false);        
+        // character.SetActive(false);
+        gemSpawner.SetActive(false);
     }
 }
