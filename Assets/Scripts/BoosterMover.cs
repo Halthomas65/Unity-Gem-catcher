@@ -26,7 +26,13 @@ public class BoosterMover : MonoBehaviour
     // Điều kiện kiểm tra thông tin của OTHER - đối tượng va chạm với Gem
     if (other.gameObject.CompareTag("Player"))  // Va chạm với đối tượng Player
     {
-      CharacterMovement.speed *= boost;
+      // Giới hạn tốc độ tăng lên của nhân vật
+      if (CharacterMovement.speed <= CharacterMovement.maxSpeed)
+      {
+        CharacterMovement.speed *= boost;
+        Debug.Log("Current Speed: " + CharacterMovement.speed);
+      }
+
 
       //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
       AudioSource audioSource = other.GetComponent<AudioSource>();
@@ -36,8 +42,6 @@ public class BoosterMover : MonoBehaviour
 
       Destroy(gameObject); // Hủy đối tượng này - Gem
 
-    //   new WaitForSeconds(effectTime);
-    //   CharacterMovement.speed /= boost; // booster hết tác dụng
     }
     else if (other.gameObject.CompareTag("Ground"))
     {

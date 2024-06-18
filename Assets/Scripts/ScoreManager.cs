@@ -54,7 +54,6 @@ public class ScoreManager : MonoBehaviour
     {
         gameOverText.text = "Game Over!\nScore: " + score;
         gameOverPanel.SetActive(true);
-        // character.SetActive(false);
         gemSpawner.SetActive(false);
     }
 }
