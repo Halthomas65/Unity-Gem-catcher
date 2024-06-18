@@ -1,5 +1,5 @@
 1. Nhân vật có thể nhảy nhiều lần   V
-2. Trang trí diện mạo đất trời, nhân vật, ngọc  Va
+2. Trang trí diện mạo đất trời, nhân vật, ngọc  V
 3. Tạo vật phẩm điểm cao    V
 4. Tạo vật phẩm xấu
 5. Tạo vật phẩm tăng tốc V

@@ -5432,7 +5432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71dd9a9376be20c4f9727c48f3bbf6b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeLimit: 10
+  timeLimit: 60
   remainingTime: 0
   scoreText: {fileID: 1938498065}
   gameOverPanel: {fileID: 1967669420}
