@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoosterMover : MonoBehaviour
+public class SpikeMover : MonoBehaviour
 {
   /*
-  * khai báo biến tốc độ là một số thực có giá trị bằng 5.
-  * Public sẽ cho phép ta truy cập giá trị speed từ UnityEditor
+  * Spike làm chậm và gây mất máu cho nhân vật
   */
   public float speed = 5f;
-  public int boost = 2;    // Tốc độ tăng lên của nhân vật theo cấp số nhân
+  public int slow = 2;    // Tốc độ giảm của nhân vật theo cấp số nhân
 
   void Update()
   {
@@ -25,11 +24,10 @@ public class BoosterMover : MonoBehaviour
     // Điều kiện kiểm tra thông tin của OTHER - đối tượng va chạm với Gem
     if (other.gameObject.CompareTag("Player"))  // Va chạm với đối tượng Player
     {
-      // Giới hạn tốc độ tăng lên của nhân vật
-      if (CharacterMovement.speed <= CharacterMovement.maxSpeed)
+      // Giới hạn tốc độ bị giảm của nhân vật
+      if (CharacterMovement.speed <= CharacterMovement.minSpeed)
       {
-        CharacterMovement.speed *= boost;
-        Debug.Log("Current Speed: " + CharacterMovement.speed);
+        CharacterMovement.speed /= slow;
       }
 
       //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
@@ -39,6 +37,9 @@ public class BoosterMover : MonoBehaviour
       audioSource.Play();
 
       Destroy(gameObject); // Hủy đối tượng này - Gem
+
+      //   new WaitForSeconds(effectTime);
+      //   CharacterMovement.speed /= boost; // booster hết tác dụng
     }
     else if (other.gameObject.CompareTag("Ground"))
     {
