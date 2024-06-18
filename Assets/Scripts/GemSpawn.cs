@@ -23,7 +23,9 @@ public class GemFallScript : MonoBehaviour
         }
         else if (ScoreManager.resetValue) // reset các chỉ số khi trò chơi kết thúc
         {
-            ScoreManager.resetValue = false; // reset lại giá trị của resetValue
+            // timer = startTime; // reset lại giá trị của timer
+            Start();    // reset lại giá trị của timer
+            // ScoreManager.resetValue = false; // reset lại giá trị của resetValue
         }
         { }
         // Cộng dồn thời gian từ lần cuối cập nhật đến bây giờ vào biến timer.

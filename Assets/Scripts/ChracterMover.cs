@@ -24,6 +24,7 @@ public class CharacterMovement : MonoBehaviour
         animator = GetComponent<Animator>(); //bắt đầu animation khép mở chân
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
+        Debug.Log("Current Speed: " + speed);
     }
 
     void Update()
@@ -34,7 +35,8 @@ public class CharacterMovement : MonoBehaviour
         }
         else if (ScoreManager.resetValue) // nếu resetValue = true
         {
-            speed = startSpeed; // reset lại tốc độ của nhân vật
+            Start(); // reset lại tốc độ của nhân vật
+            // speed = startSpeed; // reset lại tốc độ của nhân vật
             ScoreManager.resetValue = false; // reset lại giá trị của resetValue
         }
 

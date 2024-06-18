@@ -1,0 +1,37 @@
+1. Nhân vật có thể nhảy nhiều lần   V
+2. Trang trí diện mạo đất trời, nhân vật, ngọc  Va
+3. Tạo vật phẩm điểm cao    V
+4. Tạo vật phẩm xấu
+5. Tạo vật phẩm tăng tốc V
+6. Vật phẩm xuất hiện từ tọa độ khác
+7. Tạo vật phẩm trừ thời gian khi thu thập
+8. Tạo vật phẩm cản trở     V
+
+
+
+// gem +2 points    V
+// x2 speed     V
+// x0.5 speed
+// instant death
+// +1 jump
+// x2 points
+// random enemy hit player: - 1 point
+// friend
+// freeze time
+// + time
+// magnet
+
+// Canvas:
+// reset game button    V
+// high score
+// jump V
+// double jump  V
+// dash
+// imunity
+
+// Level:
+// 1. 1 gem/3s 
+// 2. 1 gem/2s - after 10pts
+// 3. 1 gem/1s - after 20pts
+
+// Mode endless: no time limit

@@ -29,6 +29,7 @@ public class BoosterMover : MonoBehaviour
       if (CharacterMovement.speed <= CharacterMovement.maxSpeed)
       {
         CharacterMovement.speed *= boost;
+        Debug.Log("Current Speed: " + CharacterMovement.speed);
       }
 
       //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
@@ -38,9 +39,6 @@ public class BoosterMover : MonoBehaviour
       audioSource.Play();
 
       Destroy(gameObject); // Hủy đối tượng này - Gem
-
-      //   new WaitForSeconds(effectTime);
-      //   CharacterMovement.speed /= boost; // booster hết tác dụng
     }
     else if (other.gameObject.CompareTag("Ground"))
     {
