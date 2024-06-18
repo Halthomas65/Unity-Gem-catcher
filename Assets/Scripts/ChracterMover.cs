@@ -32,11 +32,6 @@ public class CharacterMovement : MonoBehaviour
         {
             return; // thoát khỏi hàm Update
         }
-        else if (ScoreManager.resetValue) // nếu resetValue = true
-        {
-            speed = startSpeed; // reset lại tốc độ của nhân vật
-            ScoreManager.resetValue = false; // reset lại giá trị của resetValue
-        }
 
         float moveHorizontal = Input.GetAxis("Horizontal");
         bool isMoving = moveHorizontal != 0; // khai báo biến isMoving
