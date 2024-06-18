@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float startSpeed = 5.0f;
-    public static float speed;
+    public static float startSpeed = 5.0f;
+    public static float speed = startSpeed;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
@@ -14,7 +14,6 @@ public class CharacterMovement : MonoBehaviour
 
     void Start()
     {
-        speed = startSpeed;
         animator = GetComponent<Animator>(); //bắt đầu animation khép mở chân
         spriteRenderer = GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
