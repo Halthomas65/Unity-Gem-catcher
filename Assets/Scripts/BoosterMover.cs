@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BoosterMover : MonoBehaviour
-{
+{    
   /*
   * khai báo biến tốc độ là một số thực có giá trị bằng 5.
   * Public sẽ cho phép ta truy cập giá trị speed từ UnityEditor
   */
   public float speed = 5f;
-  public int boost = 2;    // Tốc độ tăng lên của nhân vật theo cấp số nhân
+  public int boost = 2;    // Tốc độ tăng lên của nhân vật
+  public int effectTime = 8; // Thời gian tác dụng của booster
 
   void Update()
   {
@@ -32,6 +33,7 @@ public class BoosterMover : MonoBehaviour
         Debug.Log("Current Speed: " + CharacterMovement.speed);
       }
 
+
       //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
       AudioSource audioSource = other.GetComponent<AudioSource>();
 
@@ -39,6 +41,7 @@ public class BoosterMover : MonoBehaviour
       audioSource.Play();
 
       Destroy(gameObject); // Hủy đối tượng này - Gem
+
     }
     else if (other.gameObject.CompareTag("Ground"))
     {
