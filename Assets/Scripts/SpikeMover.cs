@@ -7,7 +7,7 @@ public class SpikeMover : MonoBehaviour
   /*
   * Spike làm chậm và gây mất máu cho nhân vật
   */
-  public float speed = 5f;
+  // public float speed = 5f;
   public int slow = 2;    // Tốc độ giảm của nhân vật theo cấp số nhân
 
   void Update()
@@ -16,7 +16,7 @@ public class SpikeMover : MonoBehaviour
     {
       Destroy(gameObject);
     }
-    transform.Translate(Vector3.down * speed * Time.deltaTime); //tạo chuyển động theo phương thẳng đứng hướng xuống với tốc độ trên theo thời gian
+    // transform.Translate(Vector3.down * speed * Time.deltaTime); //tạo chuyển động theo phương thẳng đứng hướng xuống với tốc độ trên theo thời gian
   }
 
   void OnTriggerEnter2D(Collider2D other)
@@ -25,7 +25,7 @@ public class SpikeMover : MonoBehaviour
     if (other.gameObject.CompareTag("Player"))  // Va chạm với đối tượng Player
     {
       // Giới hạn tốc độ bị giảm của nhân vật
-      if (CharacterMovement.speed <= CharacterMovement.minSpeed)
+      if (CharacterMovement.speed >= CharacterMovement.minSpeed)
       {
         CharacterMovement.speed /= slow;
       }
@@ -37,13 +37,6 @@ public class SpikeMover : MonoBehaviour
       audioSource.Play();
 
       Destroy(gameObject); // Hủy đối tượng này - Gem
-
-      //   new WaitForSeconds(effectTime);
-      //   CharacterMovement.speed /= boost; // booster hết tác dụng
-    }
-    else if (other.gameObject.CompareTag("Ground"))
-    {
-      Destroy(gameObject);
     }
   }
 }
