@@ -8,6 +8,9 @@ public class CharacterMovement : MonoBehaviour
     public static float minSpeed; // Cần đưa giá trị sang các file khác
     public static float maxSpeed; // Cần đưa giá trị sang các file khác
 
+    private float xLimit = 11;
+    private float yLimit = -4;
+
     private Animator animator;
     private SpriteRenderer spriteRenderer;
 
@@ -57,7 +60,20 @@ public class CharacterMovement : MonoBehaviour
         if (isMoving) // nếu nhân vật đang di chuyển ngang
         {
             transform.position += new Vector3(moveHorizontal * speed * Time.deltaTime, 0f, 0f);
-            // transform.position += new Vector2(moveHorizontal * speed * Time.deltaTime, 0f);
+
+            // Giữ nhân vật trong khung hình
+            if (transform.position.x < -xLimit)
+            {
+                transform.position = new Vector3(-xLimit, transform.position.y, transform.position.z);
+            }
+            else if (transform.position.x > xLimit)
+            {
+                transform.position = new Vector3(xLimit, transform.position.y, transform.position.z);
+            }
+            if (transform.position.y < yLimit)
+            {
+                transform.position = new Vector3(transform.position.x, yLimit, transform.position.z);
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.Space)) // nếu nhân vật nhảy (nhấn phím space)
