@@ -32,15 +32,15 @@ public class CharacterMovement : MonoBehaviour
 
     void Update()
     {
-        if (ScoreManager.isGameOver) // nếu trò chơi kết thúc
+        if (TimeManager.isGameOver) // nếu trò chơi kết thúc
         {
             return; // thoát khỏi hàm Update
         }
-        else if (ScoreManager.resetValue) // nếu resetValue = true
+        else if (TimeManager.resetValue) // nếu resetValue = true
         {
             Start(); // reset lại tốc độ của nhân vật
             // speed = startSpeed; // reset lại tốc độ của nhân vật
-            ScoreManager.resetValue = false; // reset lại giá trị của resetValue
+            TimeManager.resetValue = false; // reset lại giá trị của resetValue
         }
 
         float moveHorizontal = Input.GetAxis("Horizontal");

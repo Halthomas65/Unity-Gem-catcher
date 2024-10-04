@@ -17,11 +17,11 @@ public class GemFallScript : MonoBehaviour
     }
     void Update()
     {
-        if (ScoreManager.isGameOver) // nếu trò chơi kết thúc
+        if (TimeManager.isGameOver) // nếu trò chơi kết thúc
         {
             return; // thoát khỏi hàm Update
         }
-        else if (ScoreManager.resetValue) // reset các chỉ số khi trò chơi kết thúc
+        else if (TimeManager.resetValue) // reset các chỉ số khi trò chơi kết thúc
         {
             // timer = startTime; // reset lại giá trị của timer
             Start();    // reset lại giá trị của timer

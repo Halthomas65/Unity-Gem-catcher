@@ -13,7 +13,7 @@ public class BoosterMover : MonoBehaviour
 
   void Update()
   {
-    if (ScoreManager.isGameOver)
+    if (TimeManager.isGameOver)
     {
       Destroy(gameObject);
     }
