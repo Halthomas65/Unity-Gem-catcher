@@ -76,7 +76,7 @@ public class CharacterMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(KeyCode.Space)) // nếu nhân vật nhảy (nhấn phím space)
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow)) // nếu nhân vật nhảy (nhấn phím space hoặc phím mũi tên lên)
         {
             rb.AddForce(new Vector2(rb.velocity.x, jump), ForceMode2D.Impulse);
         }

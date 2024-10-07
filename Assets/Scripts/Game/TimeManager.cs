@@ -35,6 +35,8 @@ public class TimeManager : MonoBehaviour
             isGameOver = true;
             GameOver();
 
+            // Replay
+            // TODO: change into load scene
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 isGameOver = false;
