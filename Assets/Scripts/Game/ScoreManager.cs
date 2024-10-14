@@ -10,6 +10,12 @@ public class ScoreManager : MonoBehaviour
 
     public static bool resetValue = false; // xác định reset các chỉ số khi trò chơi kết thúc
 
+    void Start()
+    {
+        // Reset score when the game starts
+        score = 0;
+    }
+    
     void Update()
     {
         scoreText.text = "Score: " + score;

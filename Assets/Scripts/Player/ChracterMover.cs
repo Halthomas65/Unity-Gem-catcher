@@ -38,9 +38,8 @@ public class CharacterMovement : MonoBehaviour
         }
         else if (TimeManager.resetValue) // nếu resetValue = true
         {
-            Start(); // reset lại tốc độ của nhân vật
-            // speed = startSpeed; // reset lại tốc độ của nhân vật
-            TimeManager.resetValue = false; // reset lại giá trị của resetValue
+            // Start(); // reset lại tốc độ của nhân vật
+            // TimeManager.resetValue = false; // reset lại giá trị của resetValue
         }
 
         float moveHorizontal = Input.GetAxis("Horizontal");
