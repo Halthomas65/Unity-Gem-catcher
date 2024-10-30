@@ -41,28 +41,31 @@ public class GameController : MonoBehaviour
             }
         }
 
-        // Resume
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Time.timeScale == 0)
         {
-            ResumeGame();
-        }
+            // Resume
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                ResumeGame();
+            }
 
-        // Reload/Retry
-        if (Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Return))
-        {
-            sceneLoader.Reload();
-        }
+            // Reload/Retry
+            if (Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Return))
+            {
+                sceneLoader.Reload();
+            }
 
-        // Main menu
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            sceneLoader.MainMenu();
-        }
+            // Main menu
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                sceneLoader.MainMenu();
+            }
 
-        // Quit
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            QuitGame();
+            // Quit
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                QuitGame();
+            }
         }
     }
 

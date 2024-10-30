@@ -20,6 +20,7 @@
 // freeze time
 // + time
 // magnet
+đạn để tấn công enemy
 
 // Canvas:
 // reset game button    V
@@ -35,3 +36,10 @@
 // 3. 1 gem/1s - after 20pts
 
 // Mode endless: no time limit
+// enemy :
+ngoi lên từ mặt đất (đinh): làm chậm, trừ điểm, game over
+bay quanh (mây): sét đánh trừ điểm, stun
+chạy quanh (khối): cướp hết buff
+
+// Adding tính năng
+shop nhân vật, tính năng

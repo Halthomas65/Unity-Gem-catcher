@@ -39,7 +39,6 @@ public class TimeManager : MonoBehaviour
             GameOver();
 
             // Replay
-            // TODO: change into load scene
             if (Input.GetKeyDown(KeyCode.Return))
             {
                 Replay();
@@ -67,7 +66,6 @@ public class TimeManager : MonoBehaviour
 
     void Replay()
     {
-        // TODO: change into load scene
         sceneLoader.Reload();
     }
 }
