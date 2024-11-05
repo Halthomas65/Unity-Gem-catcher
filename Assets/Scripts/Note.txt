@@ -27,7 +27,7 @@
 // high score
 // jump V
 // double jump  V
-// dash
+// dash V
 // imunity
 
 // Level:
@@ -43,3 +43,14 @@ chạy quanh (khối): cướp hết buff
 
 // Adding tính năng
 shop nhân vật, tính năng
+
+LV3:
+- Spike: spawn randomly, slow  player
+- new gem: 3 points
+- Enemy: minus player points, eat time, stun player, eat gems
+    + from ground: run, 
+    + from screen side: fly
+- new boost:
+    + more time
+    + bullet
+    + magnet

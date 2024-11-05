@@ -3,14 +3,19 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    float moveHorizontal;
-    float moveVertical;
+    public float moveHorizontal;
+    public float moveVertical;
     private bool isFacingRight = true;
     public float startSpeed = 5.0f;
     public float speedLimit = 20;
     public static float speed;
     public static float minSpeed; // Cần đưa giá trị sang các file khác
     public static float maxSpeed; // Cần đưa giá trị sang các file khác
+
+    // UI controls
+    bool moveLeft;
+    bool moveRight;
+    // UI controls
 
     private bool canDash = true;
     private bool isDashing;
@@ -24,19 +29,22 @@ public class CharacterMovement : MonoBehaviour
     float minY;
     float maxY;
 
-    [SerializeField] private Animator animator;
-    [SerializeField] private SpriteRenderer sr;
-    [SerializeField] private TrailRenderer tr;
+    private Animator animator;
+    private SpriteRenderer sr;
+    private TrailRenderer tr;
+    public Rigidbody2D rb;
 
     // For jumping
     // No need ground checking, can jump indefinitely
-    [SerializeField] private Rigidbody2D rb;
     public float jump;
     // For jumping
 
     void Start()
     {
         FindBoundaries();
+
+        moveLeft = false;
+        moveRight = false;
 
         speed = startSpeed;
         maxSpeed = speedLimit;
@@ -45,6 +53,7 @@ public class CharacterMovement : MonoBehaviour
         sr = GetComponent<SpriteRenderer>();
         sr.flipX = true; // Sprite đang quay về bên trái nên cần quay về bên phải cho hợp với trailrenderer
         rb = GetComponent<Rigidbody2D>();
+        tr = GetComponent<TrailRenderer>();
         Debug.Log("Current Speed: " + speed);
     }
 
@@ -70,6 +79,8 @@ public class CharacterMovement : MonoBehaviour
                 StartCoroutine(Dash());
             }
         }
+
+        // UpdateHorizontalMovement();
     }
 
     void FixedUpdate()
@@ -79,17 +90,31 @@ public class CharacterMovement : MonoBehaviour
             return; // thoát khỏi hàm Update
         }
 
-        moveHorizontal = Input.GetAxis("Horizontal");
-        moveVertical = Input.GetAxis("Vertical");
+        if (Input.GetAxis("Horizontal") != 0)
+        {
+            moveHorizontal = Input.GetAxis("Horizontal");
+        }
+        else{
+            moveHorizontal = 0;
+        }
+        if (Input.GetAxis("Vertical") != 0)
+        {
+            moveVertical = Input.GetAxis("Vertical");
+        }
+        else{
+            moveVertical = 0;
+        }
+        
         bool isMoving = moveHorizontal != 0; // khai báo biến isMoving
         animator.SetBool("isMoving", isMoving);
-
-        float deltaX = moveHorizontal * speed * Time.deltaTime;
         if (moveVertical > 0)   // Dùng để tăng tốc khi đáp nếu bấm nút xuống
             moveVertical = 0;
-        float deltaY = moveVertical * speed * Time.deltaTime;
 
-        transform.position += new Vector3(deltaX, deltaY, 0f);
+        float deltaX = moveHorizontal * Time.deltaTime;
+        float deltaY = moveVertical * Time.deltaTime ;
+        transform.position += new Vector3(deltaX, deltaY, 0f) * speed;
+
+        // rb.velocity = new Vector2(moveHorizontal, moveVertical);
 
         // Giữ nhân vật trong khung hình 
         MovementContainer();

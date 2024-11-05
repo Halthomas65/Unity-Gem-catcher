@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class UIMove : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private CharacterMovement cm;
     bool moveLeft;
     bool moveRight;
-    float horizontalMove;
-    public float speed = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        cm = GetComponent<CharacterMovement>();
 
         moveLeft = false;
         moveRight = false;
@@ -23,19 +21,19 @@ public class UIMove : MonoBehaviour
     {
         moveLeft = true;
     }
-    
+
     public void PointerUpLeft()
     {
         moveLeft = false;
     }
 
-    
+
     public void PointerDownRight()
     {
         moveRight = true;
     }
 
-    
+
     public void PointerUpRight()
     {
         moveRight = false;
@@ -50,19 +48,21 @@ public class UIMove : MonoBehaviour
     {
         if (moveLeft)
         {
-            horizontalMove = -speed;
+            cm.moveHorizontal = -1;
+
         }
         else if (moveRight)
         {
-            horizontalMove = speed;
+            cm.moveHorizontal = 1;
         }
-        else{
-            horizontalMove = 0;
+        else
+        {
+            cm.moveHorizontal = 0;
         }
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(horizontalMove, rb.velocity.y);
+        // cm.rb.velocity = new Vector2(cm.moveHorizontal, cm.rb.velocity.y);
     }
 }
