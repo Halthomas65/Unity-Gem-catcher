@@ -12,11 +12,6 @@ public class CharacterMovement : MonoBehaviour
     public static float minSpeed; // Cần đưa giá trị sang các file khác
     public static float maxSpeed; // Cần đưa giá trị sang các file khác
 
-    // UI controls
-    bool moveLeft;
-    bool moveRight;
-    // UI controls
-
     private bool canDash = true;
     private bool isDashing;
     public float dashPower = 24f;
@@ -42,9 +37,6 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         FindBoundaries();
-
-        moveLeft = false;
-        moveRight = false;
 
         speed = startSpeed;
         maxSpeed = speedLimit;

@@ -7,6 +7,8 @@ TagManager:
   - Ground
   - Gem
   - Booster
+  - Spike
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -41,6 +43,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Background
+    uniqueID: 395884805
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

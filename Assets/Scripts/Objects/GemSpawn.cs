@@ -7,7 +7,7 @@ public class GemFallScript : MonoBehaviour
     public GameObject gemPrefab;
     // Biến đếm thời gian kể từ lần sinh viên ngọc cuối cùng.
     public float startTime = 2f; 
-    public float timer;
+    [SerializeField] private float timer;
     // Khoảng thời gian (tính bằng giây) giữa mỗi lần sinh viên ngọc mới.
     public float spawnInterval = 3f; //tần suất spawn: 3 giây / 1 gem
 

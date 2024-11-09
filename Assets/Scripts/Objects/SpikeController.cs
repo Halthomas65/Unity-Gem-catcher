@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpikeMover : MonoBehaviour
+public class SpikeController : MonoBehaviour
 {
   /*
   * Spike làm chậm và gây mất máu cho nhân vật
   */
-  // public float speed = 5f;
   public int slow = 2;    // Tốc độ giảm của nhân vật theo cấp số nhân
 
   void Update()
@@ -15,19 +14,21 @@ public class SpikeMover : MonoBehaviour
     if (TimeManager.isGameOver)
     {
       Destroy(gameObject);
+      // gameObject.SetActive(false);
     }
     // transform.Translate(Vector3.down * speed * Time.deltaTime); //tạo chuyển động theo phương thẳng đứng hướng xuống với tốc độ trên theo thời gian
   }
 
   void OnTriggerEnter2D(Collider2D other)
   {
-    // Điều kiện kiểm tra thông tin của OTHER - đối tượng va chạm với Gem
+    // Điều kiện kiểm tra thông tin của OTHER - đối tượng va chạm
     if (other.gameObject.CompareTag("Player"))  // Va chạm với đối tượng Player
     {
       // Giới hạn tốc độ bị giảm của nhân vật
       if (CharacterMovement.speed >= CharacterMovement.minSpeed)
       {
         CharacterMovement.speed /= slow;
+        Debug.Log("Current Speed: " + CharacterMovement.speed);
       }
 
       //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
@@ -36,7 +37,7 @@ public class SpikeMover : MonoBehaviour
       //play âm thanh từ component đó
       audioSource.Play();
 
-      Destroy(gameObject); // Hủy đối tượng này - Gem
+      Destroy(gameObject); // Hủy đối tượng này 
     }
   }
 }
