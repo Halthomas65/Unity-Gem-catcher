@@ -45,8 +45,8 @@ chạy quanh (khối): cướp hết buff
 shop nhân vật, tính năng
 
 LV3:
-- Spike: spawn randomly, slow  player
-- new gem: 3 points
+- Spike: spawn randomly, slow  player   V
+- new gem: 3 points V
 - Enemy: minus player points, eat time, stun player, eat gems
     + from ground: run, 
     + from screen side: fly
@@ -54,3 +54,10 @@ LV3:
     + more time
     + bullet
     + magnet
+
+Next week 
+- Hoàn thành UI:
+    + chọn level trong menu
+    + đánh giá sao khi hoàn thành level
+- chức năng đổi nhân vật trong menu
+- tiếp tục car multiplayer

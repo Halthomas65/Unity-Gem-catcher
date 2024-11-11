@@ -16,7 +16,6 @@ public class SpikeController : MonoBehaviour
       Destroy(gameObject);
       // gameObject.SetActive(false);
     }
-    // transform.Translate(Vector3.down * speed * Time.deltaTime); //tạo chuyển động theo phương thẳng đứng hướng xuống với tốc độ trên theo thời gian
   }
 
   void OnTriggerEnter2D(Collider2D other)

@@ -1,20 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class LandObjSpawner : MonoBehaviour
+public class EnemyPatrolSpawner : MonoBehaviour
 {
+    // Độ cao của vật được spawn
+    public Transform posYSpawn;
+    public GameObject pointA;
+    public GameObject pointB;
     // Khai báo biến để chứa prefab của vật thể. Đây sẽ là đối tượng mà chúng ta sẽ tạo ra trong trò chơi.
-    public GameObject prefab;
+    public GameObject enemyPrefab;
+    float spawnRate = 2f;
+    
     // Biến đếm thời gian kể từ lần sinh vật thể cuối cùng.
     public float startTime = 2f; 
     [SerializeField] private float timer;
     // Khoảng thời gian (tính bằng giây) giữa mỗi lần sinh vật thể mới.
     public float spawnInterval = 3f; //tần suất spawn: 3 giây / 1 gem
-    // Độ cao của vật được spawn
-    public float posY = -3;
-
-    // int maxSpawn = 3;
+    
 
     void Start()
     {
@@ -32,21 +33,27 @@ public class LandObjSpawner : MonoBehaviour
         // Kiểm tra nếu thời gian đã đủ lớn bằng hoặc lớn hơn khoảng thời gian sinh vật thể.
         if (timer >= spawnInterval)
         {
-            SpawnObj(); // Gọi hàm sinh vật thể.
+            Spawn(); // Gọi hàm sinh vật thể.
             timer = 0; // Đặt lại biến đếm thời gian.
         }
     }
 
-    void SpawnObj()
-    {
-        /* Khai báo và tạo một biến có giá trị ngẫu nhiên trong khoảng màn hình trước khi tạo gem mới. 
-        * Biến này đóng vai trò là tọa độ X (ngang) mới.
-        */
-        float randomX = Random.Range(-8f, 8f); //Màn hình rộng 16 point nên lề trái là -8 và biên phải là 8
+    public void Spawn() {
+          float randomX = Random.Range(-8f, 8f); //Màn hình rộng 16 point nên lề trái là -8 và biên phải là 8
                                                //Khai báo một biến tọa độ vị trí và lưu giá trị tọa độ trên
-        Vector3 spawnPosition = new Vector3(randomX, posY, 0); // Đưa biến số này vào Vector3, để tạo tọa độ vị trí mới
+        Vector3 spawnPosition = new Vector3(randomX, posYSpawn.position.y, 0); // Đưa biến số này vào Vector3, để tạo tọa độ vị trí mới
 
-        //Đưa tọa độ này vào function (hàm) Instantiate để tạo và thả viên gem mới
-        Instantiate(prefab, spawnPosition, Quaternion.identity);
+        var enemy = Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+        var enemyPatrol = enemy.GetComponent<EnemyPatrol>();
+        enemyPatrol.pointA = pointA;
+        enemyPatrol.pointB = pointB;
+        enemyPatrol.Setup();
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(pointA.transform.position, 0.5f);
+        Gizmos.DrawWireSphere(pointB.transform.position, 0.5f);
+        Gizmos.DrawLine(pointA.transform.position, pointB.transform.position);
     }
 }
