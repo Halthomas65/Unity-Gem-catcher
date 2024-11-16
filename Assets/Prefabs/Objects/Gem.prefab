@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  gem: {fileID: 0}
+  point: 1
 --- !u!50 &-4002919657163582483
 Rigidbody2D:
   serializedVersion: 4
