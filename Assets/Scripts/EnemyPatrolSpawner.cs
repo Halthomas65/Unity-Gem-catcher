@@ -8,7 +8,6 @@ public class EnemyPatrolSpawner : MonoBehaviour
     public GameObject pointB;
     // Khai báo biến để chứa prefab của vật thể. Đây sẽ là đối tượng mà chúng ta sẽ tạo ra trong trò chơi.
     public GameObject enemyPrefab;
-    float spawnRate = 2f;
     
     // Biến đếm thời gian kể từ lần sinh vật thể cuối cùng.
     public float startTime = 2f; 

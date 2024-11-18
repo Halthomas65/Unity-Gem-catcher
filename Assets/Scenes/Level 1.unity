@@ -3449,7 +3449,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   timeLimit: 30
-  remainingTime: 0
   timerText: {fileID: 64136745}
   gameOverPanel: {fileID: 2033182959}
   sceneLoader: {fileID: 1476511149}
@@ -8181,6 +8180,10 @@ PrefabInstance:
     - target: {fileID: 4117170327296293942, guid: 959e5e18fca92c34e814e24c80d68395, type: 3}
       propertyPath: m_Name
       value: MovementControls
+      objectReference: {fileID: 0}
+    - target: {fileID: 4117170327296293942, guid: 959e5e18fca92c34e814e24c80d68395, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5398838744436037743, guid: 959e5e18fca92c34e814e24c80d68395, type: 3}
       propertyPath: m_text

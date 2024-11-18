@@ -9,15 +9,16 @@ TagManager:
   - Booster
   - Spike
   - Enemy
+  - TimeAid
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
-  - 
-  - 
+  - Obstacle
+  - Enemy
   - 
   - 
   - 

@@ -25,12 +25,10 @@ public class EnemyPatrol : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
 
         StartCoroutine(SpawnAction());
-        
-        // anim = GetComponent<Animator>();
-        // anim.SetBool("isRunning", true);
     }
 
-    public void Setup() {
+    public void Setup()
+    {
         targetPatrolPoint = pointA.transform.position;
         patrolPointAPos = pointA.transform.position;
         patrolPointBPos = pointB.transform.position;
@@ -39,6 +37,12 @@ public class EnemyPatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // shut off movement when spawn (when the trigger collider is disabled)
+        if (!trigger.enabled)
+        {
+            return;
+        }
+
         Vector2 point = targetPatrolPoint - transform.position;
         if (targetPatrolPoint == patrolPointBPos)
         {
@@ -54,7 +58,7 @@ public class EnemyPatrol : MonoBehaviour
             if (targetPatrolPoint == patrolPointAPos)
             {
                 targetPatrolPoint = patrolPointBPos;
-                Flip();                
+                Flip();
             }
             else if (targetPatrolPoint == patrolPointBPos)
             {
@@ -67,13 +71,16 @@ public class EnemyPatrol : MonoBehaviour
     IEnumerator SpawnAction()
     {
         // start spawn animation
+        anim = GetComponent<Animator>();
+        // blink character - first animation
 
-        // blink character
 
         // shut of collider
         trigger.enabled = false;
         yield return new WaitForSeconds(2);
 
+        // start move animation
+        anim.SetBool("isMoving", true);
         // turn on collider
         trigger.enabled = true;
     }

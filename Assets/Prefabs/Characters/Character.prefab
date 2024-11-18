@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 3248035098322572399}
   - component: {fileID: 5869116009957308099}
   - component: {fileID: 8106899831681694690}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Character
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -124,15 +124,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599d91ef579e0414aa58a5a32efd992a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveHorizontal: 0
+  moveVertical: 0
   startSpeed: 5
   speedLimit: 20
   dashPower: 24
   dashTime: 0.2
   dashCooldown: 1
   padding: 0.8
-  animator: {fileID: 866729026121139736}
-  sr: {fileID: 4166631428810236847}
-  tr: {fileID: 5869116009957308099}
   rb: {fileID: 5985837311843182743}
   jump: 10
 --- !u!61 &6916893211914385435

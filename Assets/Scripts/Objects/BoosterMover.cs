@@ -22,7 +22,7 @@ public class BoosterMover : MonoBehaviour
 
   void OnTriggerEnter2D(Collider2D other)
   {
-    // Điều kiện kiểm tra thông tin của OTHER - đối tượng va chạm với Gem
+    // Điều kiện kiểm tra thông tin của OTHER - đối tượng va chạm với Booster
     if (other.gameObject.CompareTag("Player"))  // Va chạm với đối tượng Player
     {
       // Giới hạn tốc độ tăng lên của nhân vật
@@ -38,7 +38,7 @@ public class BoosterMover : MonoBehaviour
       //play âm thanh từ component đó
       audioSource.Play();
 
-      Destroy(gameObject); // Hủy đối tượng này - Gem
+      Destroy(gameObject); // Hủy đối tượng này - Booster
     }
     else if (other.gameObject.CompareTag("Ground"))
     {
