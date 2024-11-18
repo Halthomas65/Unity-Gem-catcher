@@ -15,7 +15,24 @@ public class SceneLoader : MonoBehaviour
 
     public void NextLevel()
     {
-        SceneManager.LoadScene(currentIndex + 1);
+        if (currentIndex >= 3)
+        {
+            SceneManager.LoadScene(0);
+        }
+        else
+            SceneManager.LoadScene(currentIndex + 1);
+    }
+
+    public void PrevLevel()
+    {
+        if (currentIndex > 0)
+        {
+            SceneManager.LoadScene(currentIndex - 1);
+        }
+        else
+        {
+            Debug.Log("This is the lowest level");
+        }
     }
 
     public void Reload()

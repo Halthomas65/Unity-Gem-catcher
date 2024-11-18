@@ -647,6 +647,8 @@ MonoBehaviour:
   timerText: {fileID: 64136745}
   gameOverPanel: {fileID: 2033182959}
   sceneLoader: {fileID: 1476511149}
+  desiredPoints: 5
+  nextLevelButton: {fileID: 1698845900}
 --- !u!4 &673979304
 Transform:
   m_ObjectHideFlags: 0
@@ -1414,6 +1416,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1188474895}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1698845900 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5157191773473445365, guid: 14e2c38ff07acab47908e2f786cccdff, type: 3}
+  m_PrefabInstance: {fileID: 1500292343213446968}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1792111290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8596410609256309712, guid: aff7b97c301c0f94fb41c1f13b03cd73, type: 3}
@@ -1730,7 +1737,7 @@ PrefabInstance:
     - target: {fileID: 4158034031910728779, guid: 14e2c38ff07acab47908e2f786cccdff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 976502398}
+      objectReference: {fileID: 1476511149}
     - target: {fileID: 5366801053743104001, guid: 14e2c38ff07acab47908e2f786cccdff, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

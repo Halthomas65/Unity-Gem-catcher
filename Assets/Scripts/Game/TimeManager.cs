@@ -17,6 +17,9 @@ public class TimeManager : MonoBehaviour
     public static bool resetValue = false; // xác định reset các chỉ số khi trò chơi kết thúc
 
     public SceneLoader sceneLoader;
+
+    public float desiredPoints = 5;
+    public GameObject nextLevelButton;
     
     void Start() // đếm giờ khi trò chơi bắt đầu
     {
@@ -61,6 +64,13 @@ public class TimeManager : MonoBehaviour
     {
         // gameOverText.text = "Game Over!\nScore: " + ScoreManager.score;
         gameOverPanel.SetActive(true);
+
+        // if reach desired points, display the "Next Level" button.
+        if (ScoreManager.score >= desiredPoints)
+        {
+            nextLevelButton.gameObject.SetActive(true);
+        }
+
         Time.timeScale = 0;
     }
 
