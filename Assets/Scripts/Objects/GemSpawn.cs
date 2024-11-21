@@ -21,10 +21,6 @@ public class GemFallScript : MonoBehaviour
         {
             return; // thoát khỏi hàm Update
         }
-        else if (TimeManager.resetValue) // reset các chỉ số khi trò chơi kết thúc
-        {
-            // Start();    // reset lại giá trị của timer
-        }
 
         // Cộng dồn thời gian từ lần cuối cập nhật đến bây giờ vào biến timer.
         timer += Time.deltaTime;

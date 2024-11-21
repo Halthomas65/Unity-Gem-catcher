@@ -10,6 +10,8 @@ public class BoosterMover : MonoBehaviour
   */
   public float speed = 5f;
   public int boost = 2;    // Tốc độ tăng lên của nhân vật theo cấp số nhân
+  public AudioClip boosterSound; // Assign the sound clip in the Unity editor
+  public float volume = 2f;
 
   void Update()
   {
@@ -32,13 +34,8 @@ public class BoosterMover : MonoBehaviour
         Debug.Log("Current Speed: " + CharacterMovement.speed);
       }
 
-      //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
-      AudioSource audioSource = other.GetComponent<AudioSource>();
-
-      //play âm thanh từ component đó
-      audioSource.Play();
-
-      Destroy(gameObject); // Hủy đối tượng này - Booster
+      AudioSource.PlayClipAtPoint(boosterSound, transform.position, volume); // Play the sound at the position of the booster
+      Destroy(gameObject);
     }
     else if (other.gameObject.CompareTag("Ground"))
     {

@@ -50,7 +50,7 @@ public class GameController : MonoBehaviour
             }
 
             // Reload/Retry
-            if (Input.GetKeyDown(KeyCode.L) || Input.GetKeyDown(KeyCode.Return))
+            if (Input.GetKeyDown(KeyCode.L))
             {
                 sceneLoader.Reload();
             }

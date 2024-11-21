@@ -6299,9 +6299,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 976502398}
-        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
-        m_MethodName: ResumeGame
+      - m_Target: {fileID: 1476511149}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: NextLevel
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8191,6 +8191,10 @@ PrefabInstance:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 2033182959}
+    - target: {fileID: 7324801606831425423, guid: 022fac80aeb001c4f958a22a673e7361, type: 3}
+      propertyPath: nextLevelButton
+      value: 
+      objectReference: {fileID: 1862770593}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

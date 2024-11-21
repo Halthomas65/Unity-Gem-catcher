@@ -14,7 +14,6 @@ public class TimeManager : MonoBehaviour
     // public TextMeshProUGUI gameOverText;
 
     public static bool isGameOver = false;
-    public static bool resetValue = false; // xác định reset các chỉ số khi trò chơi kết thúc
 
     public SceneLoader sceneLoader;
 
@@ -49,6 +48,14 @@ public class TimeManager : MonoBehaviour
         }
         timerText.text = "Time: " + Mathf.CeilToInt(remainingTime); //Mathf.CeilToInt(remainingTime) làm tròn số nguyên dương
 
+        // This part is for the level loading functionality
+        if (isGameOver)
+        {
+            if (Input.GetKeyDown(KeyCode.N))
+            {
+                sceneLoader.NextLevel();
+            }
+        }
     }
 
     private IEnumerator CountdownTimer()

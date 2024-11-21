@@ -55,9 +55,10 @@ LV3:
     + bullet
     + magnet
 
-Next week 
-- Hoàn thành UI:
-    + chọn level trong menu
-    + đánh giá sao khi hoàn thành level
-- chức năng đổi nhân vật trong menu
-- tiếp tục car multiplayer
+Cần:
+- Hit sound:
+    + player vs enemy 
+    + player vs booster
+    + player vs aid
+- Level list ở menu: bấm vào nút nào thì hiện ra level đó
+- Điều kiện chiến thắng

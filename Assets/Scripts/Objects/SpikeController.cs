@@ -9,6 +9,20 @@ public class SpikeController : MonoBehaviour
   */
   public int slow = 2;    // Tốc độ giảm của nhân vật theo cấp số nhân
 
+  //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
+  public AudioClip spikeSound;
+  public float volume = 2f;
+
+  Animator animator;
+  new Collider2D collider;
+
+  public float spawnTime = 1.5f;
+
+  void Start()
+  {
+    StartCoroutine(Spawn());
+  }
+
   void Update()
   {
     if (TimeManager.isGameOver)
@@ -30,13 +44,23 @@ public class SpikeController : MonoBehaviour
         Debug.Log("Current Speed: " + CharacterMovement.speed);
       }
 
-      //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
-      AudioSource audioSource = other.GetComponent<AudioSource>();
-
-      //play âm thanh từ component đó
-      audioSource.Play();
-
-      Destroy(gameObject); // Hủy đối tượng này 
+      AudioSource.PlayClipAtPoint(spikeSound, transform.position, volume); // Play the sound at the position of the booster
+      Destroy(gameObject);
     }
+  }
+
+  IEnumerator Spawn()
+  {
+    animator = GetComponent<Animator>();
+    animator.SetBool("justSpawn", true);
+    collider = GetComponent<Collider2D>();
+    collider.enabled = false;
+
+    // Không cho nhân vật vào đối tượng này
+    yield return new WaitForSeconds(spawnTime);
+
+    // Mở lại nhân vật vào đối tượng này
+    animator.SetBool("justSpawn", false);
+    collider.enabled = true;
   }
 }
