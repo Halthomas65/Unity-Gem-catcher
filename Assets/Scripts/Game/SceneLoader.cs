@@ -35,6 +35,11 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
+    public void LoadLevel(int level)
+    {
+        SceneManager.LoadScene(level);
+    }
+
     public void Reload()
     {
         // PlayerScript.playerScore = 0;

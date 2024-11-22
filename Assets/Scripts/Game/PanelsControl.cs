@@ -31,8 +31,4 @@ public class PanelsControl : MonoBehaviour
             objectivesPanel.SetActive(false);
         }
     }
-    // Controls guide
-
-
-    // Objectives
 }

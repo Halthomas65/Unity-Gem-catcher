@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: fed538ca299e7b84998c85effb8394b6
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_0
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 153
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696bc0f311e4eb84ba88becb5bbd1807
+      internalID: 702099965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_1
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 153
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e59fac00993f72c42b7fdcca00b02f31
+      internalID: 1631578349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_2
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 153
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e927c381fd9ce4e47b8f53a547797301
+      internalID: 1807424766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 153
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43762cfc776a29c41891e615b973e065
+      internalID: 366655653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_4
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 153
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c58bc9631a456e34dbc2633542416369
+      internalID: 1215134624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_5
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 83
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f45bce7c0fa52fb4b8b0ec15ff3ec9ac
+      internalID: -106296621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_6
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 83
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bca48b7583fef84ea2dffc4c29f8dec
+      internalID: -923845497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_7
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 83
+        width: 104
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d03d652bb66a1c46a9fa5bdfa06cf70
+      internalID: 1877520994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_8
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 86
+        width: 100
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43541d59f2b657f40b0dafddf2116d1b
+      internalID: -41273444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_9
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 83
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ed36fda92b9b54d849d8d8395ea3d9
+      internalID: -427879238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_10
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 13
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb24d5cdee6f02f41904dd09c577d0f7
+      internalID: 1636304724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_11
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 13
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65e700ff709bdf4b81ac26c6b0375d0
+      internalID: 1296063181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_12
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 13
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfc605a75263c5949bc936b71ae96715
+      internalID: 1808061533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_13
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 13
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bfa65cb52645843852cca024011377
+      internalID: 1555060540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: minimize-maximize-close-button-icon-600nw-2079118798_14
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 13
+        width: 110
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edd33642e72b8374f98a0e1ab0685b4a
+      internalID: -1133971184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      minimize-maximize-close-button-icon-600nw-2079118798_0: 702099965
+      minimize-maximize-close-button-icon-600nw-2079118798_1: 1631578349
+      minimize-maximize-close-button-icon-600nw-2079118798_10: 1636304724
+      minimize-maximize-close-button-icon-600nw-2079118798_11: 1296063181
+      minimize-maximize-close-button-icon-600nw-2079118798_12: 1808061533
+      minimize-maximize-close-button-icon-600nw-2079118798_13: 1555060540
+      minimize-maximize-close-button-icon-600nw-2079118798_14: -1133971184
+      minimize-maximize-close-button-icon-600nw-2079118798_2: 1807424766
+      minimize-maximize-close-button-icon-600nw-2079118798_3: 366655653
+      minimize-maximize-close-button-icon-600nw-2079118798_4: 1215134624
+      minimize-maximize-close-button-icon-600nw-2079118798_5: -106296621
+      minimize-maximize-close-button-icon-600nw-2079118798_6: -923845497
+      minimize-maximize-close-button-icon-600nw-2079118798_7: 1877520994
+      minimize-maximize-close-button-icon-600nw-2079118798_8: -41273444
+      minimize-maximize-close-button-icon-600nw-2079118798_9: -427879238
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
