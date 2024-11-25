@@ -28,6 +28,9 @@ public class CharacterMovement : MonoBehaviour
     private SpriteRenderer sr;
     private TrailRenderer tr;
     public Rigidbody2D rb;
+    public AudioSource audioSourceMainCharacter;
+    // public AudioClip collideWithGem, collideWithSpike;
+
 
     // For jumping
     // No need ground checking, can jump indefinitely
@@ -37,6 +40,7 @@ public class CharacterMovement : MonoBehaviour
     void Start()
     {
         FindBoundaries();
+        // audioSourceMainCharacter.PlayOneShot(collideWithGem);
 
         speed = startSpeed;
         maxSpeed = speedLimit;

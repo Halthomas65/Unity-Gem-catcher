@@ -133,6 +133,7 @@ MonoBehaviour:
   dashCooldown: 1
   padding: 0.8
   rb: {fileID: 5985837311843182743}
+  audioSourceMainCharacter: {fileID: 3248035098322572399}
   jump: 10
 --- !u!61 &6916893211914385435
 BoxCollider2D:

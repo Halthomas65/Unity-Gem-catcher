@@ -473,3 +473,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pointEat: 1
   timeEat: 4
+  hitSound: {fileID: 8300000, guid: f4310258019ea984da7be093983deebc, type: 3}
+  volume: 2

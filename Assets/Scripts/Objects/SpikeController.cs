@@ -44,7 +44,7 @@ public class SpikeController : MonoBehaviour
         Debug.Log("Current Speed: " + CharacterMovement.speed);
       }
 
-      AudioSource.PlayClipAtPoint(spikeSound, transform.position, volume); // Play the sound at the position of the booster
+      other.GetComponent<CharacterMovement>().audioSourceMainCharacter.PlayOneShot(spikeSound);
       Destroy(gameObject);
     }
   }

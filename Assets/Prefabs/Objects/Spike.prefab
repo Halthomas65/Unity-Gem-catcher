@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slow: 2
-  spikeSound: {fileID: 8300000, guid: d88d385bb14d7c445853f882726e4c26, type: 3}
+  spikeSound: {fileID: 8300000, guid: fd0d98ad00e071944962759e55c45c75, type: 3}
   volume: 1000
   spawnTime: 1.5
 --- !u!95 &7856590170249643734
@@ -214,7 +214,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d88d385bb14d7c445853f882726e4c26, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fd0d98ad00e071944962759e55c45c75, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

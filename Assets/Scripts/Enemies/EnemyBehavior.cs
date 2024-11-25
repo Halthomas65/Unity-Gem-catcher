@@ -7,6 +7,9 @@ public class EnemyBehavior : MonoBehaviour
     //   public int slow = 2;    // Tốc độ giảm của nhân vật theo cấp số nhân
     public int pointEat = 1;
     public float timeEat = 5f;
+    //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
+    public AudioClip hitSound;
+    public float volume = 2f;
 
     // public ScoreManager scoreManager;
     // public TimeManager timeManager;
@@ -25,15 +28,11 @@ public class EnemyBehavior : MonoBehaviour
         // Điều kiện kiểm tra thông tin của OTHER - đối tượng va chạm
         if (other.gameObject.CompareTag("Player"))  // Va chạm với đối tượng Player
         {
+            other.GetComponent<CharacterMovement>().audioSourceMainCharacter.PlayOneShot(hitSound);
+            
             ScoreManager.AddScore(-pointEat);
 
             TimeManager.remainingTime -= timeEat;
-
-            // //Khai báo biến tên audioSource để gán thông tin và các hàm của audio component từ lệnh other.GetComponent<AudioSource>()
-            // AudioSource audioSource = other.GetComponent<AudioSource>();
-
-            // //play âm thanh từ component đó
-            // audioSource.Play();
 
             Destroy(gameObject); // Hủy đối tượng này 
         }

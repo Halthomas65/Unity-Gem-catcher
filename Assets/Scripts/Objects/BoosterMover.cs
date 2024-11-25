@@ -35,6 +35,8 @@ public class BoosterMover : MonoBehaviour
       }
 
       AudioSource.PlayClipAtPoint(boosterSound, transform.position, volume); // Play the sound at the position of the booster
+      other.GetComponent<CharacterMovement>().audioSourceMainCharacter.PlayOneShot(boosterSound);
+
       Destroy(gameObject);
     }
     else if (other.gameObject.CompareTag("Ground"))
